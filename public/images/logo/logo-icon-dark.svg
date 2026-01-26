@@ -1,0 +1,35 @@
+<svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dashboard/Velocímetro -->
+  <g id="dashboard-icon">
+    <!-- Semicírculo del velocímetro -->
+    <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="#60a5fa" stroke-width="8" stroke-linecap="round"/>
+    
+    <!-- Marcas del velocímetro -->
+    <line x1="15" y1="48" x2="20" y2="43" stroke="#3b82f6" stroke-width="3" />
+    <line x1="28" y1="28" x2="32" y2="32" stroke="#3b82f6" stroke-width="3" />
+    <line x1="50" y1="18" x2="50" y2="24" stroke="#3b82f6" stroke-width="3" />
+    <line x1="72" y1="28" x2="68" y2="32" stroke="#3b82f6" stroke-width="3" />
+    <line x1="85" y1="48" x2="80" y2="43" stroke="#3b82f6" stroke-width="3" />
+    
+    <!-- Aguja -->
+    <line x1="50" y1="50" x2="68" y2="32" stroke="#fb923c" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="50" cy="50" r="5" fill="#fb923c" />
+    
+    <!-- Base -->
+    <rect x="20" y="50" width="60" height="8" rx="4" fill="#3b82f6" />
+    
+    <!-- Iconos de autobús pequeños en la base -->
+    <g transform="translate(30, 52)">
+      <rect width="8" height="4" rx="1" fill="#1e293b" />
+      <rect x="1" y="0.5" width="1.5" height="1.5" fill="#60a5fa" />
+      <rect x="3" y="0.5" width="1.5" height="1.5" fill="#60a5fa" />
+      <rect x="5.5" y="0.5" width="1.5" height="1.5" fill="#60a5fa" />
+    </g>
+    <g transform="translate(62, 52)">
+      <rect width="8" height="4" rx="1" fill="#1e293b" />
+      <rect x="1" y="0.5" width="1.5" height="1.5" fill="#60a5fa" />
+      <rect x="3" y="0.5" width="1.5" height="1.5" fill="#60a5fa" />
+      <rect x="5.5" y="0.5" width="1.5" height="1.5" fill="#60a5fa" />
+    </g>
+  </g>
+</svg>

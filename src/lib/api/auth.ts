@@ -7,30 +7,33 @@ import {
   AuthResponse,
   User,
 } from '../types/auth';
+import { use } from 'react';
 
 export const authService = {
   // Login
   login: async (credentials: LoginCredentials): Promise<AuthResponse> => {
     const response = await api.post<AuthResponse>('/auth/login', credentials);
-    const { accessToken, refreshToken, user } = response.data;
+    const dataResponse: AuthResponse = response.data;
+    const { accessToken, refreshToken, user } = dataResponse.data;
 
     // Guardar tokens y usuario
     tokenManager.setTokens(accessToken, refreshToken);
     sessionManager.setUser(user);
 
-    return response.data;
+    return dataResponse;
   },
 
   // Register
   register: async (data: RegisterData): Promise<AuthResponse> => {
     const response = await api.post<AuthResponse>('/auth/register', data);
-    const { accessToken, refreshToken, user } = response.data;
+    const dataResponse: AuthResponse = response.data;
+    const { accessToken, refreshToken, user } = dataResponse.data;
 
     // Guardar tokens y usuario
     tokenManager.setTokens(accessToken, refreshToken);
     sessionManager.setUser(user);
 
-    return response.data;
+    return dataResponse;
   },
 
   // Logout

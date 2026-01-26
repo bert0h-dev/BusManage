@@ -1,7 +1,9 @@
 export interface AuthResponse {
-  user: User;
-  accessToken: string;
-  refreshToken: string;
+  data: {
+    user: User;
+    accessToken: string;
+    refreshToken: string;
+  };
 }
 
 export interface User {
@@ -10,11 +12,16 @@ export interface User {
   fullName: string;
   role: string;
   isActive: Boolean;
-  createdAt: Date;
+  staff: Staff | null;
+}
+
+export interface Staff {
+  exployeeNumber: string;
+  role: string;
 }
 
 export interface LoginCredentials {
-  email: string;
+  identifier: string;
   password: string;
 }
 
