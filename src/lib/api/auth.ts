@@ -7,12 +7,12 @@ import {
   AuthResponse,
   User,
 } from '../types/auth';
-import { use } from 'react';
 
 export const authService = {
   // Login
   login: async (credentials: LoginCredentials): Promise<AuthResponse> => {
     const response = await api.post<AuthResponse>('/auth/login', credentials);
+    console.log('Response completo', response);
     const dataResponse: AuthResponse = response.data;
     const { accessToken, refreshToken, user } = dataResponse.data;
 
